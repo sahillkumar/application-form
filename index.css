@@ -1,7 +1,9 @@
 :root {
-  --title-color: rgba(245, 245, 245, 0.9);
+  --main-color: rgba(245, 245, 245, 0.9);
   --title-font: "Cormorant Garamond", serif;
   --text-font: "Red Hat Display", sans-serif;
+  --text-size: 1.2rem;
+  --secondary-color: #bc805a;
 }
 
 * {
@@ -22,45 +24,16 @@
   justify-content: center;
 }
 
-.sideBar {
-  height: 100%;
-  flex: 1;
-  width: 50%;
-  position: relative;
-
-  .logo {
-    position: relative;
-    width: 100%;
-    top: 10%;
-    color: var(--title-color);
-  }
-
-  .photoCredit {
-    text-align: center;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    color: var(--title-color);
-    font-family: var(--title-font);
-    font-size: 1rem;
-    > a {
-      color: inherit;
-      text-decoration: underline;
-    }
-  }
-}
-
 .formContainer {
   height: 80%;
   width: 50%;
-  border: 1px solid rgb(221, 212, 212);
   display: flex;
   flex-direction: column;
   gap: 24px;
 
   h1 {
     font-family: var(--title-font);
-    color: var(--title-color);
+    color: var(--main-color);
     font-weight: 300;
     text-transform: uppercase;
     font-size: 5rem;
@@ -69,9 +42,74 @@
   }
 
   .formLayout {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.35);
+    padding: 32px;
 
-    .formField {
+    fieldset {
+      display: flex;
+      font-size: var(--text-size);
+      margin-bottom: 32px;
+      border: none;
+      column-gap: 32px;
+
+      > .formField {
+        flex: 1;
+
+        label {
+          color: var(--main-color);
+          cursor: pointer;
+          display: block;
+          margin-bottom: 8px;
+          letter-spacing: 1px;
+        }
+
+        input,
+        select {
+          height: 48px;
+          background-color: transparent;
+          padding: 0 8px;
+          font-size: inherit;
+          outline: none;
+          border: 1.35px solid var(--main-color);
+          color: var(--main-color);
+          width: 100%;
+          box-sizing: border-box;
+          background-color: transparent;
+        }
+
+        select > option {
+          background-color: rgba(189, 152, 107, 0.753);
+        }
+
+        option:first-of-type {
+          color: var(--main-color);
+        }
+      }
+    }
+
+    .buttonWrapper {
+      text-align: center;
+      padding: 12px;
+
+      button[type="submit"] {
+        background-color: transparent;
+        height: 42px;
+        box-sizing: content-box;
+        padding: 8px;
+        border: 1.5px solid var(--main-color);
+        color: var(--main-color);
+        width: 50%;
+        cursor: pointer;
+        font-size: 1.3rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+      }
+
+      button[type="submit"]:hover {
+        background: var(--main-color);
+        color: var(--secondary-color);
+        transition: background 0.25s;
+      }
     }
   }
 }

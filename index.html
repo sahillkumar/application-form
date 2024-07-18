@@ -14,50 +14,50 @@
   </head>
   <body>
     <div class="container">
-      <!-- <div class="sideBar">
-        <div class="logo">
-          <h3>India Hikes</h3>
-        </div>
-        <div class="photoCredit">
-          Photo by
-          <a
-            href="https://wall.alphacoders.com"
-            target="_blank"
-            rel="noreferrer"
-            >Wallpaper Abyss</a
-          >
-        </div>
-      </div> -->
       <div class="formContainer">
         <h1>India Hikes</h1>
         <div class="formLayout">
           <form action="" method="post">
             <fieldset>
-              <label for="firstName">First Name</label>
-              <input type="text" name="firstName" id="firstName" />
-              <label for="lastName">Last Name</label>
-              <input type="text" name="lastName" id="lastName" />
+              <div class="formField">
+                <label for="firstName">First Name</label>
+                <input type="text" name="firstName" id="firstName" required />
+              </div>
+              <div class="formField">
+                <label for="lastName">Last Name</label>
+                <input type="text" name="lastName" id="lastName" required />
+              </div>
             </fieldset>
             <fieldset>
-              <label for="mobile">Mobile</label>
-              <input type="text" name="mobile" id="mobile" />
-              <label for="email">Email</label>
-              <input type="email" name="email" id="email" />
+              <div class="formField">
+                <label for="mobile">Mobile</label>
+                <input type="text" name="mobile" id="mobile" required />
+              </div>
+              <div class="formField">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required />
+              </div>
             </fieldset>
             <fieldset>
-              <label for="trekName">Choose Trek</label>
-              <select id="trekName" name="trekName">
-                <option value="dayaraBugyal">Dayara Bugyal</option>
-                <option value="dudhSagar">DudhSagar</option>
-                <option value="kedarnath">Kedarnath</option>
-                <option value="kuanriPass">Kuanri Pass</option>
-                <option value="netravati">Netravati</option>
-                <option value="valleyOfFlowers">Valley of Flowers</option>
-              </select>
-              <label for="trekDate">Trek Date</label>
-              <input type="date" name="trekDate" id="trekDate" />
+              <div class="formField">
+                <label for="trekName">Choose Trek</label>
+                <select id="trekName" name="trekName" required>
+                  >
+                  <option selected disabled>Select your trek</option>
+                  <option value="dayaraBugyal">Dayara Bugyal</option>
+                  <option value="dudhSagar">DudhSagar</option>
+                  <option value="kedarnath">Kedarnath</option>
+                  <option value="kuanriPass">Kuanri Pass</option>
+                  <option value="netravati">Netravati</option>
+                  <option value="valleyOfFlowers">Valley of Flowers</option>
+                </select>
+              </div>
+              <div class="formField">
+                <label for="trekDate">Trek Date</label>
+                <input type="date" name="trekDate" id="trekDate" required />
+              </div>
             </fieldset>
-            <div>
+            <div class="buttonWrapper">
               <button type="submit">Book Your Trek</button>
             </div>
           </form>
