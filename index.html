@@ -17,32 +17,60 @@
       <div class="formContainer">
         <h1>India Hikes</h1>
         <div class="formLayout">
-          <form action="" method="post">
+          <form action="#" method="post">
             <fieldset>
               <div class="formField">
                 <label for="firstName">First Name</label>
-                <input type="text" name="firstName" id="firstName" required />
+                <input
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  required
+                  minlength="1"
+                  maxlength="30"
+                  placeholder="Jennifer"
+                />
               </div>
               <div class="formField">
                 <label for="lastName">Last Name</label>
-                <input type="text" name="lastName" id="lastName" required />
+                <input
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  required
+                  minlength="1"
+                  maxlength="30"
+                  placeholder="Lawrence"
+                />
               </div>
             </fieldset>
             <fieldset>
               <div class="formField">
                 <label for="mobile">Mobile</label>
-                <input type="text" name="mobile" id="mobile" required />
+                <input
+                  type="text"
+                  name="mobile"
+                  id="mobile"
+                  required
+                  pattern="(^\d{10}$)"
+                  placeholder="9087654321"
+                />
               </div>
               <div class="formField">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" required />
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  required
+                  placeholder="sundarpichai@gmail.com"
+                />
               </div>
             </fieldset>
             <fieldset>
               <div class="formField">
                 <label for="trekName">Choose Trek</label>
                 <select id="trekName" name="trekName" required>
-                  >
                   <option selected disabled>Select your trek</option>
                   <option value="dayaraBugyal">Dayara Bugyal</option>
                   <option value="dudhSagar">DudhSagar</option>

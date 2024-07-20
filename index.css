@@ -2,7 +2,6 @@
   --main-color: rgba(245, 245, 245, 0.9);
   --title-font: "Cormorant Garamond", serif;
   --text-font: "Red Hat Display", sans-serif;
-  --text-size: 1.2rem;
   --secondary-color: #bc805a;
 }
 
@@ -18,7 +17,7 @@
 
 .container {
   height: 100vh;
-  background: url("banner.jpg") no-repeat center/100%;
+  background: url("banner.jpg") no-repeat center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -26,7 +25,7 @@
 
 .formContainer {
   height: 80%;
-  width: 50%;
+  width: max(50%, 380px);
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -36,7 +35,7 @@
     color: var(--main-color);
     font-weight: 300;
     text-transform: uppercase;
-    font-size: 5rem;
+    font-size: clamp(1rem, calc(4vw + 1.5rem), 5rem);
     letter-spacing: 4px;
     text-align: center;
   }
@@ -47,7 +46,7 @@
 
     fieldset {
       display: flex;
-      font-size: var(--text-size);
+      font-size: 1rem;
       margin-bottom: 32px;
       border: none;
       column-gap: 32px;
@@ -77,12 +76,13 @@
           background-color: transparent;
         }
 
-        select > option {
-          background-color: rgba(189, 152, 107, 0.753);
+        option {
+          color: var(--secondary-color);
         }
 
-        option:first-of-type {
-          color: var(--main-color);
+        select,
+        [type="date"] {
+          cursor: pointer;
         }
       }
     }
@@ -100,7 +100,7 @@
         color: var(--main-color);
         width: 50%;
         cursor: pointer;
-        font-size: 1.3rem;
+        font-size: 1.25rem;
         font-weight: 600;
         letter-spacing: 1px;
       }
